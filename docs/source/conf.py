@@ -12,7 +12,7 @@
 #
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../../dglchem/'))
+sys.path.insert(0, os.path.abspath('../../dglchem'))
 
 
 # -- Project information -----------------------------------------------------
@@ -32,8 +32,14 @@ release = '0.1'
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
+    'sphinx.ext.autosummary',
+    'sphinx.ext.coverage',
+    'sphinx.ext.mathjax',
+    'sphinx.ext.napoleon',
     'sphinx.ext.viewcode',
-    'sphinx.ext.githubpages',
+    'sphinx.ext.intersphinx',
+    'sphinx.ext.graphviz',
+    'sphinx_gallery.gen_gallery',
     'sphinx_rtd_theme'
 ]
 
@@ -47,6 +53,9 @@ exclude_patterns = []
 
 
 # -- Options for HTML output -------------------------------------------------
+
+# The name of the Pygments (syntax highlighting) style to use.
+pygments_style = 'sphinx'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
